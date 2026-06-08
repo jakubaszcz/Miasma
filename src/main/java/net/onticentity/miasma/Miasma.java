@@ -2,6 +2,8 @@ package net.onticentity.miasma;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.TheEndBiomes;
+import net.onticentity.miasma.world.level.biome.ModBiomes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +17,7 @@ public class Miasma implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
+		TheEndBiomes.addHighlandsBiome(ModBiomes.MIASMA_WASTES, 10);
 		LOGGER.info("Hello Fabric world!");
 	}
 }
