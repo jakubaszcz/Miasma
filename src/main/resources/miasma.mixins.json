@@ -3,7 +3,7 @@
 	"package": "net.onticentity.miasma.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"EndSurfaceRuleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
