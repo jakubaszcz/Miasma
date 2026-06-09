@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.biome.v1.TheEndBiomes;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
+import net.onticentity.miasma.effects.ModEffects;
 import net.onticentity.miasma.events.MiasmaServerTickEvents;
 import net.onticentity.miasma.world.level.biome.ModBiomes;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class Miasma implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModEffects.register();
 		TheEndBiomes.addHighlandsBiome(ModBiomes.MIASMA_WASTES, 10);
 
 		MiasmaServerTickEvents.register();
