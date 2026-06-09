@@ -17,9 +17,10 @@
 	"entrypoints": {
 		"main": [
 			"net.onticentity.miasma.Miasma"
+			, "net.onticentity.miasma.items.ModItemsInitializer"
 		],
 		"fabric-datagen": [
-			"net.onticentity.miasma.MiasmaDataGenerator"
+			"net.onticentity.miasma.datagen.MiasmaDataGenerator"
 		]
 	},
 	"mixins": [

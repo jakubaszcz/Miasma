@@ -4,8 +4,12 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.TheEndBiomes;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
+import net.onticentity.miasma.blocks.ModBlocks;
 import net.onticentity.miasma.effects.ModEffects;
 import net.onticentity.miasma.events.MiasmaServerTickEvents;
 import net.onticentity.miasma.world.level.biome.ModBiomes;
