@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "miasma:block/miasma_enlium",
+    "bottom": "minecraft:block/end_stone",
+    "side": "miasma:block/miasma_enlium_side"
+  }
+}

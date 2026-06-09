@@ -2,6 +2,7 @@ package net.onticentity.miasma.mixin;
 
 import net.minecraft.world.level.levelgen.*;
 import net.minecraft.world.level.block.Blocks;
+import net.onticentity.miasma.blocks.ModBlocks;
 import net.onticentity.miasma.world.level.biome.ModBiomes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,7 +25,7 @@ public class EndSurfaceRuleMixin {
                         SurfaceRules.isBiome(ModBiomes.MIASMA_WASTES),
                         SurfaceRules.ifTrue(
                                 SurfaceRules.ON_FLOOR,
-                                SurfaceRules.state(Blocks.DIRT.defaultBlockState())
+                                SurfaceRules.state(ModBlocks.MIASMA_ENLIUM.defaultBlockState())
                         )
                 ),
                 original

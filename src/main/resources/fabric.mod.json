@@ -5,7 +5,7 @@
 	"name": "Miasma",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Onticentity"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -17,7 +17,8 @@
 	"entrypoints": {
 		"main": [
 			"net.onticentity.miasma.Miasma"
-			, "net.onticentity.miasma.items.ModItemsInitializer"
+			, "net.onticentity.miasma.items.ModItemsInitializer",
+			"net.onticentity.miasma.blocks.ModBlocksInitializer"
 		],
 		"fabric-datagen": [
 			"net.onticentity.miasma.datagen.MiasmaDataGenerator"
