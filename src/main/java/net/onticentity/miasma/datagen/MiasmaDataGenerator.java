@@ -11,5 +11,6 @@ public class MiasmaDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(MiasmaEnglishLangProvider::new);
+        pack.addProvider(MiasmaModelProvider::new);
     }
 }

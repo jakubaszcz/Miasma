@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "miasma:block/eon_debris_top",
-    "bottom": "miasma:block/eon_debris_top",
-    "side": "miasma:block/eon_debris_side"
-  }
-}
