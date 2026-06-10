@@ -43,5 +43,5 @@ public class ModBlocks {
     }
 
     public static final Block MIASMA_ENLIUM = register("miasma_enlium", Block::new, BlockBehaviour.Properties.of(), true);
-
+    public static final Block EON_DEBRIS = register("eon_debris", Block::new, BlockBehaviour.Properties.of(), true);
 }

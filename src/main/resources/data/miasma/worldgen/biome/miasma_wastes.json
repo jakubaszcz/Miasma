@@ -2,7 +2,10 @@
   "carvers": [],
   "downfall": 0.5,
   "effects": {
-    "water_color": "#3f76e4"
+    "fog_color": 5635925,
+    "sky_color": 5635925,
+    "water_color": 5635925,
+    "water_fog_color": 5635925
   },
   "features": [],
   "has_precipitation": false,
@@ -12,14 +15,7 @@
     "axolotls": [],
     "creature": [],
     "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
+    "monster": [],
     "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []
