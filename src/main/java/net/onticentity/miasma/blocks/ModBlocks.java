@@ -9,7 +9,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.onticentity.miasma.Miasma;
 
 import java.util.function.Function;
@@ -42,6 +45,16 @@ public class ModBlocks {
     public static void initialize() {
     }
 
-    public static final Block MIASMA_ENLIUM = register("miasma_enlium", Block::new, BlockBehaviour.Properties.of(), true);
-    public static final Block EON_DEBRIS = register("eon_debris", Block::new, BlockBehaviour.Properties.of(), true);
+    public static final Block MIASMA_ENLIUM = register("miasma_enlium", Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 9.0F), true);
+    public static final Block EON_DEBRIS = register("eon_debris", Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .requiresCorrectToolForDrops()
+                    .strength(50.0F, 1400.0F)
+                    .sound(SoundType.ANCIENT_DEBRIS), true);
 }

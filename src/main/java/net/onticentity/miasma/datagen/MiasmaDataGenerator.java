@@ -12,5 +12,6 @@ public class MiasmaDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(MiasmaEnglishLangProvider::new);
         pack.addProvider(MiasmaModelProvider::new);
+        pack.addProvider(MiasmaBlockLootTableProvider::new);
     }
 }
