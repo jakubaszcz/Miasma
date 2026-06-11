@@ -57,4 +57,6 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(50.0F, 1400.0F)
                     .sound(SoundType.ANCIENT_DEBRIS), true);
+
+    public static final Block MIASMA_ROOTS = register("miasma_roots", MiasmaRootsBlock::new, BlockBehaviour.Properties.of().instabreak().noCollision(), true);
 }

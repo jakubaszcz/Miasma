@@ -15,6 +15,7 @@ public class MiasmaEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("block.miasma.miasma_enlium", "Miasma Enlium");
+        translationBuilder.add("block.miasma.miasma_roots", "Miasma Roots");
         translationBuilder.add("block.miasma.eon_debris", "Eon Debris");
 
         translationBuilder.add("item.miasma.miasrite_scrap", "Miasrite Scrap");
