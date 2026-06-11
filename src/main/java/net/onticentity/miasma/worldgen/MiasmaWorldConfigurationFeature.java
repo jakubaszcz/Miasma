@@ -8,6 +8,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.onticentity.miasma.Miasma;
 import net.onticentity.miasma.blocks.ModBlocks;
@@ -21,6 +23,12 @@ public class MiasmaWorldConfigurationFeature {
                     Identifier.fromNamespaceAndPath(Miasma.MOD_ID, "eon_debris_configured_feature")
             );
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MIASMA_ROOTS_CONFIGURED_FEATURE_KEY =
+            ResourceKey.create(
+                    Registries.CONFIGURED_FEATURE,
+                    Identifier.fromNamespaceAndPath(Miasma.MOD_ID, "miasma_roots_configured_feature")
+            );
+
     public static void configure(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         List<OreConfiguration.TargetBlockState> targets = List.of(
                 OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), ModBlocks.EON_DEBRIS.defaultBlockState())
@@ -29,6 +37,13 @@ public class MiasmaWorldConfigurationFeature {
         context.register(EON_DEBRIS_CONFIGURED_FEATURE_KEY, new ConfiguredFeature<>(
                 Feature.ORE,
                 new OreConfiguration(targets, 3)
+        ));
+
+        context.register(MIASMA_ROOTS_CONFIGURED_FEATURE_KEY, new ConfiguredFeature<>(
+                Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(
+                        BlockStateProvider.simple(ModBlocks.MIASMA_ROOTS)
+                )
         ));
     }
 

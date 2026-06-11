@@ -41,6 +41,12 @@ public class Miasma implements ModInitializer {
 				MiasmaWorldPlaceFeature.EON_DEBRIS_PLACED_KEY
 		);
 
+		BiomeModifications.addFeature(
+				BiomeSelectors.includeByKey(ModBiomes.MIASMA_WASTES),
+				GenerationStep.Decoration.VEGETAL_DECORATION,
+				MiasmaWorldPlaceFeature.MIASMA_ROOTS_PLACED_KEY
+		);
+
 		LOGGER.info("Hello Fabric world!");
 	}
 }

@@ -3,6 +3,7 @@ package net.onticentity.miasma.worldgen;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -18,6 +19,12 @@ public class MiasmaWorldPlaceFeature {
             ResourceKey.create(
                     Registries.PLACED_FEATURE,
                     Identifier.fromNamespaceAndPath(Miasma.MOD_ID, "eon_debris_placed")
+            );
+
+    public static final ResourceKey<PlacedFeature> MIASMA_ROOTS_PLACED_KEY =
+            ResourceKey.create(
+                    Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(Miasma.MOD_ID, "miasma_roots_placed")
             );
 
     public static void configure(BootstrapContext<PlacedFeature> context) {
@@ -39,6 +46,21 @@ public class MiasmaWorldPlaceFeature {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(MiasmaWorldConfigurationFeature.EON_DEBRIS_CONFIGURED_FEATURE_KEY),
                         eonDebrisModifiers
+                )
+        );
+
+        List<PlacementModifier> miasmaRootsModifiers = List.of(
+                CountPlacement.of(UniformInt.of(10, 20)),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                BiomeFilter.biome()
+        );
+
+        context.register(
+                MIASMA_ROOTS_PLACED_KEY,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(MiasmaWorldConfigurationFeature.MIASMA_ROOTS_CONFIGURED_FEATURE_KEY),
+                        miasmaRootsModifiers
                 )
         );
     }
