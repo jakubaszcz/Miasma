@@ -18,6 +18,7 @@ import net.onticentity.miasma.events.MiasmaServerTickEvents;
 import net.onticentity.miasma.world.level.biome.ModBiomes;
 import net.onticentity.miasma.worldgen.MiasmaWorldConfigurationFeature;
 import net.onticentity.miasma.worldgen.MiasmaWorldPlaceFeature;
+import net.onticentity.miasma.worldgen.ModFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +29,7 @@ public class Miasma implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModFeatures.register();
 		ModEffects.register();
 		TheEndBiomes.addHighlandsBiome(ModBiomes.MIASMA_WASTES, 10);
 
@@ -36,7 +38,7 @@ public class Miasma implements ModInitializer {
 		BiomeModifications.addFeature(
 				BiomeSelectors.includeByKey(ModBiomes.MIASMA_WASTES),
 				GenerationStep.Decoration.UNDERGROUND_ORES,
-				MiasmaWorldPlaceFeature.MIASMA_SPIRE_PLACED_KEY
+				MiasmaWorldPlaceFeature.EON_DEBRIS_PLACED_KEY
 		);
 
 		LOGGER.info("Hello Fabric world!");
