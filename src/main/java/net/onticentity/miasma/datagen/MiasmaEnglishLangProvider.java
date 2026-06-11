@@ -18,6 +18,7 @@ public class MiasmaEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block.miasma.eon_debris", "Eon Debris");
 
         translationBuilder.add("item.miasma.miasrite_scrap", "Miasrite Scrap");
+        translationBuilder.add("item.miasma.miasrite_ingot", "Miasrite Ingot");
 
         translationBuilder.add("effect.miasma.miasma_effect", "Miasma");
     }
