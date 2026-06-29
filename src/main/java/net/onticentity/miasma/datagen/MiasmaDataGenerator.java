@@ -20,6 +20,7 @@ public class MiasmaDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MiasmaModelProvider::new);
         pack.addProvider(MiasmaBlockLootTableProvider::new);
         pack.addProvider(MiasmaRecipeProvider::new);
+        pack.addProvider(MiasmaBlockTagProvider::new);
     }
 
     @Override

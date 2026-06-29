@@ -27,8 +27,7 @@ public class ModItems {
         return item;
     }
 
-    public static final Item MIASRITE_SCRAP = register("miasrite_scrap", Item::new, new Item.Properties());
-    public static final Item MIASRITE_INGOT = register("miasrite_ingot", Item::new, new Item.Properties());
+    public static final Item MIASRITE_ECHO = register("miasrite_echo", Item::new, new Item.Properties());
 
     public static void initialize() {
     }

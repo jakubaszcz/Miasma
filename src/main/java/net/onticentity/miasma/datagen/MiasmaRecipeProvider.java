@@ -28,21 +28,6 @@ public class MiasmaRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
-
-                shapeless(RecipeCategory.MISC, ModItems.MIASRITE_INGOT)
-                        .requires(ModItems.MIASRITE_SCRAP, 4)
-                        .requires(Items.DIAMOND, 4)
-                        .unlockedBy(getHasName(ModItems.MIASRITE_SCRAP), has(Items.DIAMOND)).save(output);
-
-                oreSmelting(
-                        List.of(ModBlocks.EON_DEBRIS),
-                        RecipeCategory.MISC,
-                        CookingBookCategory.MISC,
-                        ModItems.MIASRITE_SCRAP,
-                        1f,
-                        500,
-                        "eon_miasma_smelting"
-                );
             }
         };
     }

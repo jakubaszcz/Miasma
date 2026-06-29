@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.onticentity.miasma.blocks.ModBlocks;
+import net.onticentity.miasma.items.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
@@ -19,7 +20,11 @@ public class MiasmaBlockLootTableProvider extends FabricBlockLootSubProvider {
 
     @Override
     public void generate() {
-        dropSelf(ModBlocks.MIASMA_ENLIUM);
-        dropSelf(ModBlocks.EON_DEBRIS);
+        dropSelf(ModBlocks.MOON_STONE);
+
+
+        this.add(ModBlocks.MIASRITE_ORE,
+                block -> createSingleItemTable(ModItems.MIASRITE_ECHO));
+
     }
 }

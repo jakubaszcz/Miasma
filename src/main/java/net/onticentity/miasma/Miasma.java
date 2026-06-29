@@ -31,20 +31,22 @@ public class Miasma implements ModInitializer {
 	public void onInitialize() {
 		ModFeatures.register();
 		ModEffects.register();
-		TheEndBiomes.addHighlandsBiome(ModBiomes.MIASMA_WASTES, 10);
+		TheEndBiomes.addHighlandsBiome(ModBiomes.MIASMA_WASTES, 1.0);
+		TheEndBiomes.addMidlandsBiome(ModBiomes.MIASMA_WASTES, ModBiomes.MIASMA_WASTES, 1.0);
+		TheEndBiomes.addBarrensBiome(ModBiomes.MIASMA_WASTES, ModBiomes.MIASMA_WASTES, 1.0);
 
 		MiasmaServerTickEvents.register();
 
 		BiomeModifications.addFeature(
 				BiomeSelectors.includeByKey(ModBiomes.MIASMA_WASTES),
-				GenerationStep.Decoration.UNDERGROUND_ORES,
-				MiasmaWorldPlaceFeature.EON_DEBRIS_PLACED_KEY
+				GenerationStep.Decoration.VEGETAL_DECORATION,
+				MiasmaWorldPlaceFeature.MIASMA_ROOTS_PLACED_KEY
 		);
 
 		BiomeModifications.addFeature(
 				BiomeSelectors.includeByKey(ModBiomes.MIASMA_WASTES),
-				GenerationStep.Decoration.VEGETAL_DECORATION,
-				MiasmaWorldPlaceFeature.MIASMA_ROOTS_PLACED_KEY
+				GenerationStep.Decoration.SURFACE_STRUCTURES,
+				MiasmaWorldPlaceFeature.MIASMA_SPIRE_PLACED_KEY
 		);
 
 		LOGGER.info("Hello Fabric world!");

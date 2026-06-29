@@ -28,15 +28,21 @@ public class MiasmaModelProvider extends FabricModelProvider {
                 BlockModelGenerators.PlantType.NOT_TINTED
         );
         blockStateModelGenerator.createTrivialBlock(
-                ModBlocks.EON_DEBRIS,
-                TexturedModel.COLUMN
+                ModBlocks.MIASRITE_ORE,
+                TexturedModel.CUBE
         );
+
+        blockStateModelGenerator.createTrivialBlock(
+                ModBlocks.MOON_STONE,
+                TexturedModel.CUBE
+        );
+
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
 
-    itemModelGenerator.generateFlatItem(ModItems.MIASRITE_SCRAP, ModelTemplates.FLAT_ITEM);
+    itemModelGenerator.generateFlatItem(ModItems.MIASRITE_ECHO, ModelTemplates.FLAT_ITEM);
 
     }
 

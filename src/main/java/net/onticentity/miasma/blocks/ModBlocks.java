@@ -51,12 +51,19 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops()
                     .strength(3.0F, 9.0F), true);
-    public static final Block EON_DEBRIS = register("eon_debris", Block::new,
+    public static final Block MIASRITE_ORE = register("miasrite_ore", Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(50.0F, 1400.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHER_ORE), true);
+
+    public static final Block MOON_STONE = register("moon_stone", Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .requiresCorrectToolForDrops()
-                    .strength(50.0F, 1400.0F)
-                    .sound(SoundType.ANCIENT_DEBRIS), true);
+                    .strength(40.0F, 1400.0F)
+                    .sound(SoundType.STONE), true);
 
     public static final Block MIASMA_ROOTS = register("miasma_roots", MiasmaRootsBlock::new, BlockBehaviour.Properties.of().instabreak().noCollision(), true);
 }
