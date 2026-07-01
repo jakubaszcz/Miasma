@@ -31,6 +31,7 @@ public class ModItems {
     }
 
     public static final Item MIASRITE_ECHO = register("miasrite_echo", Item::new, new Item.Properties());
+    public static final Item MIASRITE_CORE = register("miasrite_core", Item::new, new Item.Properties());
 
     public static final Item MIASRITE_SPEAR = register("miasrite_spear", Item::new, new Item.Properties().spear(ModToolMaterials.MIASRITE, 1.35F, 1.4F, 0.25F, 1.5F, 7.0F, 5F, 5.1F, 7.25F, 4.6F).fireResistant());
 

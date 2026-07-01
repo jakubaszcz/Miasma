@@ -43,6 +43,7 @@ public class MiasmaModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
 
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_ECHO, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MIASRITE_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -54,7 +55,6 @@ public class MiasmaModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_CHESTPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_LEGGINGS, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_BOOTS, ModelTemplates.FLAT_ITEM);
-
     }
 
     @Override

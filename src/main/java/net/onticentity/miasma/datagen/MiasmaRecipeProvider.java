@@ -28,6 +28,16 @@ public class MiasmaRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 HolderLookup.RegistryLookup<Item> itemLookup = registries.lookupOrThrow(Registries.ITEM);
+
+                shaped(RecipeCategory.MISC, ModItems.MIASRITE_CORE)
+                        .pattern("EEE")
+                        .pattern("EPD")
+                        .pattern("DDD")
+                        .define('E', ModItems.MIASRITE_ECHO)
+                        .define('P', Items.ENDER_PEARL)
+                        .define('D', Items.DIAMOND)
+                        .unlockedBy(getHasName(ModItems.MIASRITE_ECHO), has(ModItems.MIASRITE_ECHO))
+                        .save(output);
             }
         };
     }

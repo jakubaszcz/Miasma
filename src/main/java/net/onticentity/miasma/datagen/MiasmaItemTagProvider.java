@@ -19,7 +19,7 @@ public class MiasmaItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         valueLookupBuilder(ModTags.Items.REPAIRS_MIASRITE_TOOL)
-                .add(ModItems.MIASRITE_ECHO);
+                .add(ModItems.MIASRITE_CORE);
 
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.MIASRITE_HELMET);
