@@ -21,6 +21,7 @@ public class MiasmaDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MiasmaBlockLootTableProvider::new);
         pack.addProvider(MiasmaRecipeProvider::new);
         pack.addProvider(MiasmaBlockTagProvider::new);
+        pack.addProvider(MiasmaItemTagProvider::new);
         pack.addProvider((FabricDataGenerator.Pack.Factory<MiasmaEquipmentAssetProvider>) MiasmaEquipmentAssetProvider::new);
     }
 
