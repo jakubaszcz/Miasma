@@ -18,11 +18,6 @@ public class MiasmaModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        blockStateModelGenerator.createTrivialBlock(
-                ModBlocks.MIASMA_ENLIUM,
-                TexturedModel.CUBE_TOP_BOTTOM
-        );
-
         blockStateModelGenerator.createCrossBlock(
                 ModBlocks.MIASMA_ROOTS,
                 BlockModelGenerators.PlantType.NOT_TINTED
@@ -34,6 +29,11 @@ public class MiasmaModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.createTrivialBlock(
                 ModBlocks.MOON_STONE,
+                TexturedModel.CUBE
+        );
+
+        blockStateModelGenerator.createTrivialBlock(
+                ModBlocks.CRACKED_MOON_STONE,
                 TexturedModel.CUBE
         );
 
@@ -49,6 +49,11 @@ public class MiasmaModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.MIASRITE_SPEAR, ModelTemplates.SPEAR_IN_HAND);
+
+        itemModelGenerator.generateFlatItem(ModItems.MIASRITE_HELMET, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MIASRITE_CHESTPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MIASRITE_LEGGINGS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MIASRITE_BOOTS, ModelTemplates.FLAT_ITEM);
 
     }
 

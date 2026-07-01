@@ -13,5 +13,10 @@ public class ModTags {
                 Registries.ITEM,
                 Identifier.fromNamespaceAndPath("miasma", "repairs_miasrite_tool")
         );
+
+        public static final TagKey<Item> REPAIRS_MIASRITE_ARMOR = TagKey.create(
+                Registries.ITEM,
+                Identifier.fromNamespaceAndPath("miasma", "repairs_miasrite_armor")
+        );
     }
 }

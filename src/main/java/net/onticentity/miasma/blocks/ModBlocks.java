@@ -45,12 +45,6 @@ public class ModBlocks {
     public static void initialize() {
     }
 
-    public static final Block MIASMA_ENLIUM = register("miasma_enlium", Block::new,
-            BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.SAND)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(3.0F, 9.0F), true);
     public static final Block MIASRITE_ORE = register("miasrite_ore", Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
@@ -59,6 +53,13 @@ public class ModBlocks {
                     .sound(SoundType.NETHER_ORE), true);
 
     public static final Block MOON_STONE = register("moon_stone", Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .requiresCorrectToolForDrops()
+                    .strength(40.0F, 1400.0F)
+                    .sound(SoundType.STONE), true);
+
+    public static final Block CRACKED_MOON_STONE = register("cracked_moon_stone", Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
                     .requiresCorrectToolForDrops()

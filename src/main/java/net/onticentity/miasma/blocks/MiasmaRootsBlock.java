@@ -22,6 +22,6 @@ public class MiasmaRootsBlock extends VegetationBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(ModBlocks.MIASMA_ENLIUM);
+        return state.is(ModBlocks.MOON_STONE);
     }
 }

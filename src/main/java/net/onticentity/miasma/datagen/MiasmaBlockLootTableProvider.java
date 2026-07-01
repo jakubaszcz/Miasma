@@ -21,6 +21,7 @@ public class MiasmaBlockLootTableProvider extends FabricBlockLootSubProvider {
     @Override
     public void generate() {
         dropSelf(ModBlocks.MOON_STONE);
+        dropSelf(ModBlocks.CRACKED_MOON_STONE);
 
 
         this.add(ModBlocks.MIASRITE_ORE,

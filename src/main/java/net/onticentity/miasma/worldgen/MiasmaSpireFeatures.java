@@ -64,7 +64,6 @@ public class MiasmaSpireFeatures extends Feature<NoneFeatureConfiguration> {
                 BlockPos pos = origin.above(y);
 
                 if (level.isEmptyBlock(pos) || level.getBlockState(pos).is(Blocks.END_STONE)
-                        || level.getBlockState(pos).is(ModBlocks.MIASMA_ENLIUM)
                         || level.getBlockState(pos).is(ModBlocks.MIASMA_ROOTS)) {
                     level.setBlock(pos, ModBlocks.MOON_STONE.defaultBlockState(), 2);
                     placedAny = true;
@@ -75,14 +74,19 @@ public class MiasmaSpireFeatures extends Feature<NoneFeatureConfiguration> {
                 BlockPos pos = origin.relative(direction).above(y);
 
                 if (level.isEmptyBlock(pos) || level.getBlockState(pos).is(Blocks.END_STONE)
-                        || level.getBlockState(pos).is(ModBlocks.MIASMA_ENLIUM)
                         || level.getBlockState(pos).is(ModBlocks.MIASMA_ROOTS)) {
 
                     if (random.nextFloat() < 0.05F) {
                         level.setBlock(pos, ModBlocks.MIASRITE_ORE.defaultBlockState(), 2);
                     }
                     else {
-                        level.setBlock(pos, ModBlocks.MOON_STONE.defaultBlockState(), 2);
+                        boolean isCrackedZone = pos.getY() <= origin.getY() + 2;
+
+                        if (isCrackedZone && random.nextFloat() < 0.35F) {
+                            level.setBlock(pos, ModBlocks.CRACKED_MOON_STONE.defaultBlockState(), 2);
+                        } else {
+                            level.setBlock(pos, ModBlocks.MOON_STONE.defaultBlockState(), 2);
+                        }
                     }
                     placedAny = true;
                 }

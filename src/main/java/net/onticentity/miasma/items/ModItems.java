@@ -7,7 +7,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorMaterials;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.onticentity.miasma.Miasma;
+import net.onticentity.miasma.materials.ModArmorMaterials;
 import net.onticentity.miasma.materials.ModToolMaterials;
 
 import java.util.function.Function;
@@ -36,6 +39,22 @@ public class ModItems {
     public static final Item MIASRITE_AXE = register("miasrite_axe", (p) -> new AxeItem(ToolMaterial.NETHERITE, 6.0F, -3.0F, p), (new Item.Properties()).fireResistant());
     public static final Item MIASRITE_HOE = register("miasrite_hoe", (p) -> new HoeItem(ToolMaterial.NETHERITE, -4.0F, 0.0F, p), (new Item.Properties()).fireResistant());
     public static final Item MIASRITE_SHOVEL = register("miasrite_shovel", (p) -> new ShovelItem(ToolMaterial.NETHERITE, -4.0F, 0.0F, p), (new Item.Properties()).fireResistant());
+
+    public static final Item MIASRITE_HELMET = register("miasrite_helmet", Item::new, new Item.Properties().humanoidArmor(ModArmorMaterials.INSTANCE, ArmorType.HELMET)
+            .durability(ArmorType.HELMET.getDurability(ModArmorMaterials.BASE_DURABILITY))
+    );
+
+    public static final Item MIASRITE_CHESTPLATE = register("miasrite_chestplate", Item::new, new Item.Properties().humanoidArmor(ModArmorMaterials.INSTANCE, ArmorType.CHESTPLATE)
+            .durability(ArmorType.CHESTPLATE.getDurability(ModArmorMaterials.BASE_DURABILITY))
+    );
+
+    public static final Item MIASRITE_LEGGINGS = register("miasrite_leggings", Item::new, new Item.Properties().humanoidArmor(ModArmorMaterials.INSTANCE, ArmorType.LEGGINGS)
+            .durability(ArmorType.LEGGINGS.getDurability(ModArmorMaterials.BASE_DURABILITY))
+    );
+
+    public static final Item MIASRITE_BOOTS = register("miasrite_boots", Item::new, new Item.Properties().humanoidArmor(ModArmorMaterials.INSTANCE, ArmorType.BOOTS)
+            .durability(ArmorType.BOOTS.getDurability(ModArmorMaterials.BASE_DURABILITY))
+    );
 
     public static void initialize() {
     }

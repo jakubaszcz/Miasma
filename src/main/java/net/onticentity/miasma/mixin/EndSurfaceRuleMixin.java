@@ -25,7 +25,7 @@ public class EndSurfaceRuleMixin {
                         SurfaceRules.isBiome(ModBiomes.MIASMA_WASTES),
                         SurfaceRules.ifTrue(
                                 SurfaceRules.ON_FLOOR,
-                                SurfaceRules.state(ModBlocks.MIASMA_ENLIUM.defaultBlockState())
+                                SurfaceRules.state(ModBlocks.MOON_STONE.defaultBlockState())
                         )
                 ),
                 original
